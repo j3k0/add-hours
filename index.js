@@ -3,7 +3,7 @@ var hours = process.argv.slice(2);
 var totalSeconds = hours.reduce(function(total, hour) {
     var tokens = hour.replace('h', ':').replace('m', ':').replace('s', ':').split(':');
     if (tokens.length >= 3)
-        return total + 3600 * tokens[0] + 60 * tokens[1] + tokens[2];
+        return total + 3600 * tokens[0] + 60 * tokens[1] + 1 * tokens[2];
     else if (tokens.length == 2)
         return total + 3600 * tokens[0] + 60 * tokens[1];
     else if (tokens.length == 1)
